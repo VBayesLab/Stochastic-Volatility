@@ -15,13 +15,13 @@ ver = ['v',num2str(idx)];
 name = ['Results_lstmSV_SP500',date_time,ver];
 
 %% Bayesian inference
-% Create a lstmSV object with defauts attributes
+% Create a lstmSV object with defauts properties
 Model = lstmSV();
 
-% Create a Blocking Pseudo-Marginal object, setting random seed attribute
+% Create a Blocking Pseudo-Marginal object, setting random seed property
 sampler = BPM('Seed',1,...
               'SaveAfter',100,...
-              'NumMCMC',200);
+              'NumMCMC',100000);
 
 % Set saving name (optional)
 sampler.SaveFileName = name;
@@ -31,11 +31,12 @@ lstmSV_fit = estimate(sampler,Model,y);
 
 %% Estimate marginal likelihood with IS2
 lstmSV_fit.Post.IS2 = IS2(y,lstmSV_fit,...
-                         'NumParticle',100,...
-                         'NumISParticle',200,...
-                         'Burnin',100,...
+                         'NumParticle',1000,...
+                         'NumISParticle',5000,...
+                         'Burnin',10000,...
                          'Seed',1);
 disp(['Marginal likelihood: ',num2str(lstmSV_fit.Post.IS2.Marllh)]);
 
 %% Forecast
+
 
