@@ -5,7 +5,7 @@ A Matlab package to implement Bayesian Inference, forecast and simulation for st
 If you use this code in your research, please cite the paper:
 
 ```
-@article{Nguyen:2019,
+@article{Nguyen:2019JBES,
 	 author = {Nghia Nguyen and Minh-Ngoc Tran and David Gunawan and Robert Kohn},
 	 title = {A Statistical Recurrent Stochastic Volatility Model for Stock Markets},
 	 journal = {Journal of Business & Economic Statistics},
