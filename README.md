@@ -6,9 +6,10 @@ If you use this code in your research, please cite the paper:
 
 ```
 @article{Nguyen:2019,
-	 author = {{Nguyen}, Nghia and {Tran}, Minh-Ngoc and {Gunawan}, David and {Kohn}, R.},
-	 title = "{A long short-term memory stochastic volatility model}",
-	 journal = {arXiv e-prints arXiv:1906.02884},
+	 author = {Nghia Nguyen and Minh-Ngoc Tran and David Gunawan and Robert Kohn},
+	 title = {A Statistical Recurrent Stochastic Volatility Model for Stock Markets},
+	 journal = {Journal of Business & Economic Statistics},
+	 eprint = {arXiv:1906.02884},
 	 year = "2019"
 }
 ```
